@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import * as data from '../../assets/proposals.json';
 import { Info } from '../model/proposals.model';
 
@@ -13,7 +13,8 @@ export class ProposalsService {
 
   private content: Info;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient, 
+             ) { }
 
   apiURL = '../../assets/proposals.json';
 

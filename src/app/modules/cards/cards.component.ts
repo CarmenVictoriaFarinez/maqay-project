@@ -10,18 +10,21 @@ import { ProposalsService } from 'src/app/services/proposals.service';
 export class CardsComponent implements OnInit {
 
   records: any= [];
+  record = null;
   url = '../../assets/proposals.json';
 
   constructor(private apiService: ProposalsService) { }
 
   ngOnInit(): void {
     this.apiService.getContent(this.url)
-    .subscribe((data) => console.log(data));
+    .subscribe((data) => this.displayData(data));
   } 
   displayData(data:any): any
 {
   this.records = data;
   console.log(this.records);
+  
+  
 }
   
 }
