@@ -17,20 +17,10 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getContent(this.url)
-    .subscribe((data) => this.displayData(data));
-  } 
-  displayData(data:any): any
-{
-  this.records = data;
-  console.log(this.records);
-  
-  
+      .subscribe((data) => this.displayData(data));
+  }
+  displayData(data: any): any {
+    this.records = data;
+    console.log(this.records);
+  }
 }
-  
-}
-
-
- 
-    
-
-

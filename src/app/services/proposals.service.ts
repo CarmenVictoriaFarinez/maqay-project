@@ -13,8 +13,7 @@ export class ProposalsService {
 
   private content: Info;
 
-  constructor(private http: HttpClient, 
-             ) { }
+  constructor(private http: HttpClient) { }
 
   apiURL = '../../assets/proposals.json';
 
